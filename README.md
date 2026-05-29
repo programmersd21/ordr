@@ -24,7 +24,7 @@
 pip install ordr-python
 ```
 
-*(Note: Requires a Rust compiler for source builds. Pre-built wheels coming soon.)*
+*(Note: Requires a Rust compiler for source builds. Pre-built wheels are available from PyPI.)*
 
 ## Usage
 
