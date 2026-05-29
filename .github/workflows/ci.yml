@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
       - uses: dtolnay/rust-toolchain@stable
-      - run: pip install numpy ruff mypy
+      - run: pip install numpy typer rich ruff mypy
       - run: cargo clippy -- -D warnings
       - run: ruff format --check python/
       - run: ruff check python/
