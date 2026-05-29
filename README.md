@@ -1,9 +1,9 @@
 # ordr
 
-[![CI](https://github.com/programmersd21/ordr/actions/workflows/ci.yml/badge.svg)](https://github.com/programmersd21/ordr/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org/)
+[![CI](https://img.shields.io/github/actions/workflow/status/programmersd21/ordr/ci.yml?style=for-the-badge&logo=github&label=CI)](https://github.com/programmersd21/ordr/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Rust](https://img.shields.io/badge/rust-1.70%2B-orange?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > **High-performance adaptive sorting for Python, powered by Rust.**
 
