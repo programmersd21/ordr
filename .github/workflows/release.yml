@@ -98,12 +98,10 @@ jobs:
           subject-path: 'wheels-*/*'
       - run: mkdir -p gh-release && find wheels-*/ -name '*.whl' -exec cp {} gh-release/ \; && find wheels-*/ -name '*.tar.gz' -exec cp {} gh-release/ \;
       - uses: softprops/action-gh-release@v2
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
         with:
           files: gh-release/*
-          draft: ${{ !startsWith(github.ref, 'refs/tags/') }}
           generate_release_notes: true
-          tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('ci-{0}', github.sha) }}
-          name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('CI build {0}', github.sha) }}
       - uses: astral-sh/setup-uv@v7
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
       - run: uv publish gh-release/*
