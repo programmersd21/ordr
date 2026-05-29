@@ -22,7 +22,7 @@ A clear and concise description of what you expected to happen.
 **Environment:**
  - OS: [e.g. Ubuntu 22.04, Windows 11, macOS 13]
  - Python version: [e.g. 3.11.5]
- - ordr version: [e.g. 0.1.0]
+ - ordr version: [e.g. 0.2.0]
 
 **Additional context**
 Add any other context about the problem here.
