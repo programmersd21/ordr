@@ -6,7 +6,7 @@ ordr is a professional sorting library that combines the performance of Rust wit
 
 ## Features
 
-- **Rust-Powered Performance** - Core algorithms in Rust with mimalloc, branchless partitioning, prefetching, and LTO
+- **Rust-Powered Performance** - Core algorithms in Rust with branchless partitioning, prefetching, and LTO
 - **Adaptive Algorithm Selection** - Automatically chooses the best algorithm for your data based on size, presortedness, duplicates, and value range
 - **Parallel Sorting** - Leverage multiple cores for large datasets
 - **NumPy Integration** - Accepts numpy arrays with zero-copy in-place sorting
@@ -70,7 +70,7 @@ ordr viz --algorithm bubble --size 20
 ordr's Rust core delivers performance that rivals or exceeds native implementations:
 
 - **Smart dispatch** analyzes your data and selects the optimal algorithm
-- **mimalloc** global allocator reduces allocation overhead
+- **Optimized allocator** reduces allocation overhead
 - **Branchless partition** minimizes branch misprediction penalties
 - **Parallel execution** for large datasets
 

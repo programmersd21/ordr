@@ -20,7 +20,7 @@ ordr/
 
 ## Design Principles
 
-1.  **Performance First**: All performance-critical code is in Rust. mimalloc global allocator, branchless partition, prefetching, and LTO.
+1.  **Performance First**: All performance-critical code is in Rust. Branchless partition, prefetching, and LTO.
 2.  **Zero-Cost Abstractions**: The Python layer is a thin wrapper. Native operations happen in-place on numpy array buffers.
 3.  **No Placeholders**: Every algorithm is fully implemented with professional optimizations.
 
@@ -50,7 +50,7 @@ When you call `ordr.smart(arr)` in Python:
 
 Uses **PyO3** with **numpy** crate. The `PyArray1<i64>` type provides direct access to numpy's internal buffer, avoiding copies at the FFI boundary.
 
-Memory allocation uses `mimalloc` via `#[global_allocator]`.
+Memory allocation uses an optimized global allocator.
 
 ## Parallelism Strategy
 

@@ -12,7 +12,7 @@
 ## Key Features
 
 - **Adaptive Dispatch (`ordr.smart`)**: Automatically chooses the best algorithm by inspecting data characteristics (size, presortedness, duplicate ratio, value range).
-- **High Performance**: Core algorithms implemented in Rust with heavy optimizations (mimalloc allocator, branchless partition, prefetching, LTO).
+- **High Performance**: Core algorithms implemented in Rust with heavy optimizations (branchless partition, prefetching, LTO).
 - **Parallel Sorting**: Leverages Rayon for multi-threaded sorting of massive datasets.
 - **NumPy Integration**: Accepts numpy arrays directly with zero-copy in-place sorting.
 - **Modern Algorithms**: Includes PDQSort (Pattern-Defeating Quicksort), TimSort, IntroSort, Radix Sort, and sorting networks for small arrays.
@@ -109,7 +109,7 @@ Performance on **1,000,000 random integers** (in-process timing):
 
 `ordr` is built with a modular architecture that separates the high-performance Rust core from the ergonomic Python API.
 
-- **Rust Core**: Found in `src/`, containing the implementation of all sorting algorithms, the analysis engine, and the global mimalloc allocator.
+- **Rust Core**: Found in `src/`, containing the implementation of all sorting algorithms and the analysis engine.
 - **Adaptive Engine**: Located in `src/adaptive/`, responsible for algorithmic dispatch with sampling-based analysis.
 - **Python Bridge**: NumPy `PyArray1` bindings in `src/lib.rs` and the `python/ordr/` package. Data flows as `list → np.ndarray → Rust in-place sort → list`.
 

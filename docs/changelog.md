@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Zero-Copy FFI**: All native `#[pyfunction]` signatures changed from `Vec<i64> -> Vec<i64>` to `(Python<'_>, &PyArray1<i64>) -> PyResult<()>`. Sorting happens in-place on the numpy array buffer. Python wrapper converts list → numpy → native in-place → list.
-- **mimalloc Global Allocator**: Replaced system allocator with mimalloc for ~2x faster allocation-heavy operations.
+- **Removed mimalloc Global Allocator**: The global allocator was reverted to the system allocator for compatibility.
 - **LTO="fat"**: Changed from `lto = true` to `lto = "fat"` for improved cross-crate optimization.
 - **PDQSort Partition**: Switched from block partitioning to branchless Hoare partition with `_mm_prefetch` hints.
 - **Sorting Networks**: Added verified optimal sorting networks for n=2,3,4 used by PDQSort's small-array path.
