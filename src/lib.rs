@@ -5,9 +5,6 @@ pub mod algorithms;
 pub mod parallel;
 pub mod utils;
 
-#[global_allocator]
-static GLOBAL_ALLOCATOR: mimalloc::MiMalloc = mimalloc::MiMalloc;
-
 #[pymodule]
 fn _ordr(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(algorithms::bubble::bubble, m)?)?;
