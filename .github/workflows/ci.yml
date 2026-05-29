@@ -11,6 +11,7 @@ on:
     paths:
       - Cargo.toml
       - pyproject.toml
+  workflow_dispatch:
 
 jobs:
   test:
