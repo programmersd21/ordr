@@ -112,6 +112,6 @@ jobs:
           generateReleaseNotes: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: astral-sh/setup-uv@v7
-      - run: uv publish gh-release/* --skip-existing
+      - run: uv publish gh-release/* --check-url https://pypi.org/simple/
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
