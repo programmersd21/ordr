@@ -1,0 +1,17 @@
+# Default owners for everything in the repo
+* @programmersd21
+
+# Rust code
+/src/ @programmersd21
+/benches/ @programmersd21
+
+# Python code
+/python/ @programmersd21
+/tests/ @programmersd21
+
+# Documentation
+/docs/ @programmersd21
+*.md @programmersd21
+
+# CI/CD
+/.github/ @programmersd21

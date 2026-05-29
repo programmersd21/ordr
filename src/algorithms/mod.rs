@@ -1,0 +1,10 @@
+pub mod bubble;
+pub mod heap;
+pub mod insertion;
+pub mod intro;
+pub mod merge;
+pub mod pdq;
+pub mod quick;
+pub mod radix;
+pub mod sorting_network;
+pub mod tim;

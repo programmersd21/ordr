@@ -1,0 +1,62 @@
+site_name: ordr
+site_description: High-performance adaptive sorting for Python, powered by Rust
+site_url: https://programmersd21.github.io/ordr
+repo_url: https://github.com/programmersd21/ordr
+repo_name: programmersd21/ordr
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - API Reference:
+      - Algorithms: api/algorithms.md
+      - Smart Sort: api/smart.md
+      - Benchmarking: api/benchmark.md
+      - Visualization: api/visualize.md
+      - CLI: api/cli.md
+  - Guides:
+      - Choosing an Algorithm: guides/choosing-an-algorithm.md
+      - Benchmarking: guides/benchmarking.md
+      - Rust-Python Interop: guides/rust-python-interop.md
+  - Internals:
+      - Architecture: internals/architecture.md
+      - Adaptive Dispatch: internals/adaptive-dispatch.md
+  - Changelog: changelog.md
+
+plugins:
+  - search

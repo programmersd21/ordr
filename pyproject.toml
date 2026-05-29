@@ -1,0 +1,63 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ordr-py"
+version = "0.1.0"
+description = "High-performance adaptive sorting for Python, powered by Rust"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "ordr contributors" }
+]
+keywords = ["sorting", "algorithms", "performance", "rust"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "numpy>=1.23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "maturin>=1.4.0",
+]
+
+[project.scripts]
+ordr = "ordr.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/programmersd21/ordr"
+Documentation = "https://programmersd21.github.io/ordr"
+Repository = "https://github.com/programmersd21/ordr"
+
+[tool.maturin]
+python-source = "python"
+module-name = "ordr._ordr"
+features = ["pyo3/extension-module"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
