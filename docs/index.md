@@ -20,7 +20,7 @@ ordr is a professional sorting library that combines the performance of Rust wit
 ### Installation
 
 ```bash
-pip install ordr-py
+pip install ordr-python
 ```
 
 ### Basic Usage

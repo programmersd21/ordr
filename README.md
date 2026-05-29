@@ -21,7 +21,7 @@
 ## Installation
 
 ```bash
-pip install ordr-py
+pip install ordr-python
 ```
 
 *(Note: Requires a Rust compiler for source builds. Pre-built wheels coming soon.)*

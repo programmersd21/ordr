@@ -5,7 +5,7 @@
 ### From PyPI
 
 ```bash
-pip install ordr-py
+pip install ordr-python
 ```
 
 ### From Source

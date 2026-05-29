@@ -3,7 +3,7 @@ requires = ["maturin>=1.4,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "ordr-py"
+name = "ordr-python"
 version = "0.1.0"
 description = "High-performance adaptive sorting for Python, powered by Rust"
 readme = "README.md"
