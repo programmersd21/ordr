@@ -1326,7 +1326,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <h3 id="changed">Changed</h3>
 <ul>
 <li><strong>Zero-Copy FFI</strong>: All native <code>#[pyfunction]</code> signatures changed from <code>Vec&lt;i64&gt; -&gt; Vec&lt;i64&gt;</code> to <code>(Python&lt;'_&gt;, &amp;PyArray1&lt;i64&gt;) -&gt; PyResult&lt;()&gt;</code>. Sorting happens in-place on the numpy array buffer. Python wrapper converts list → numpy → native in-place → list.</li>
-<li><strong>mimalloc Global Allocator</strong>: Replaced system allocator with mimalloc for ~2x faster allocation-heavy operations.</li>
+<li><strong>Removed mimalloc Global Allocator</strong>: The global allocator was reverted to the system allocator for compatibility.</li>
 <li><strong>LTO="fat"</strong>: Changed from <code>lto = true</code> to <code>lto = "fat"</code> for improved cross-crate optimization.</li>
 <li><strong>PDQSort Partition</strong>: Switched from block partitioning to branchless Hoare partition with <code>_mm_prefetch</code> hints.</li>
 <li><strong>Sorting Networks</strong>: Added verified optimal sorting networks for n=2,3,4 used by PDQSort's small-array path.</li>

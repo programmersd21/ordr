@@ -1355,7 +1355,7 @@
 <p>ordr is a professional sorting library that combines the performance of Rust with the ergonomics of Python. It features adaptive algorithm selection, parallel sorting, and comprehensive benchmarking tools.</p>
 <h2 id="features">Features</h2>
 <ul>
-<li><strong>Rust-Powered Performance</strong> - Core algorithms in Rust with mimalloc, branchless partitioning, prefetching, and LTO</li>
+<li><strong>Rust-Powered Performance</strong> - Core algorithms in Rust with branchless partitioning, prefetching, and LTO</li>
 <li><strong>Adaptive Algorithm Selection</strong> - Automatically chooses the best algorithm for your data based on size, presortedness, duplicates, and value range</li>
 <li><strong>Parallel Sorting</strong> - Leverage multiple cores for large datasets</li>
 <li><strong>NumPy Integration</strong> - Accepts numpy arrays with zero-copy in-place sorting</li>
@@ -1404,7 +1404,7 @@
 <p>ordr's Rust core delivers performance that rivals or exceeds native implementations:</p>
 <ul>
 <li><strong>Smart dispatch</strong> analyzes your data and selects the optimal algorithm</li>
-<li><strong>mimalloc</strong> global allocator reduces allocation overhead</li>
+<li><strong>Optimized allocator</strong> reduces allocation overhead</li>
 <li><strong>Branchless partition</strong> minimizes branch misprediction penalties</li>
 <li><strong>Parallel execution</strong> for large datasets</li>
 </ul>

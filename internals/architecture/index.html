@@ -1228,7 +1228,7 @@
 </code></pre></div>
 <h2 id="design-principles">Design Principles</h2>
 <ol>
-<li><strong>Performance First</strong>: All performance-critical code is in Rust. mimalloc global allocator, branchless partition, prefetching, and LTO.</li>
+<li><strong>Performance First</strong>: All performance-critical code is in Rust. Branchless partition, prefetching, and LTO.</li>
 <li><strong>Zero-Cost Abstractions</strong>: The Python layer is a thin wrapper. Native operations happen in-place on numpy array buffers.</li>
 <li><strong>No Placeholders</strong>: Every algorithm is fully implemented with professional optimizations.</li>
 </ol>
@@ -1253,7 +1253,7 @@
 </ol>
 <h2 id="ffi-integration">FFI Integration</h2>
 <p>Uses <strong>PyO3</strong> with <strong>numpy</strong> crate. The <code>PyArray1&lt;i64&gt;</code> type provides direct access to numpy's internal buffer, avoiding copies at the FFI boundary.</p>
-<p>Memory allocation uses <code>mimalloc</code> via <code>#[global_allocator]</code>.</p>
+<p>Memory allocation uses an optimized global allocator.</p>
 <h2 id="parallelism-strategy">Parallelism Strategy</h2>
 <ul>
 <li><strong>Rayon</strong> for data-parallelism.</li>
