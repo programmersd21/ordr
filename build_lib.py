@@ -24,10 +24,8 @@ def build_and_install():
         latest_wheel = max(wheels, key=os.path.getmtime)
 
         print(f"Installing {latest_wheel}...")
-        subprocess.run(
-            [sys.executable, "-m", "pip", "install", "--force-reinstall", "--no-deps", latest_wheel],
-            check=True,
-        )
+        pip_cmd = [sys.executable, "-m", "pip", "install", "--force-reinstall", "--no-deps"]
+        subprocess.run([*pip_cmd, latest_wheel], check=True)
         print("\nInstallation successful.")
 
     except subprocess.CalledProcessError as e:

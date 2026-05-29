@@ -5,10 +5,11 @@ Usage:
     python bench_hyperfine.py run <algo> <datafile> [--iters N]
 """
 
-import ordr
 import pickle
 import random
 import sys
+
+import ordr
 
 
 def generate(size, pattern, outpath):

@@ -55,4 +55,3 @@ if __name__ == "__main__":
     except subprocess.CalledProcessError:
         print("\nChecks failed.")
         sys.exit(1)
-        

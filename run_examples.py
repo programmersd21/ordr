@@ -1,4 +1,3 @@
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -78,4 +77,3 @@ def run_examples():
 
 if __name__ == "__main__":
     run_examples()
-    
