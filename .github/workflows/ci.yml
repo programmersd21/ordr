@@ -15,6 +15,9 @@ jobs:
         with:
           python-version: "3.12"
       - uses: dtolnay/rust-toolchain@stable
-      - run: pip install maturin pytest
+      - run: pip install maturin pytest ruff mypy
       - run: maturin develop --release
+      - run: ruff format --check python/
+      - run: ruff check python/
+      - run: mypy python/
       - run: pytest tests/
